@@ -1,0 +1,47 @@
+<% layout("/layouts/boilerplate") %>
+
+    <div class="row">
+        <div class="col-8 offset-2">
+            <br><br>
+    <h3>Create a New List</h3>
+    <br>
+    <form method="post" action="/listings" enctype="multipart/form-data">
+        <div class="mb-3">
+            <lable for="title" class="form-label">Title</lable>
+            <input name="listing[title]" placeholder="Enter title" class="form-control" type="text" required>
+        </div>
+       <div class="mb-3">
+        <lable for="description" class="form-label">Description</lable>
+        <textarea name="listing[description]" class="form-control"placeholder="Enter short Description" required></textarea>
+       </div>
+        <div class="mb-3">
+            <lable for="image" class="form-label">Upload Listing Image</lable>
+            <input name="listing[image]" type="file" class="form-control" required>
+        </div>
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <lable for="price">Price</lable>
+                <input name="listing[price]" placeholder="1200" type="number" class="form-control" required>
+            </div>
+            <div class="mb-3 col-md-6">
+                <lable for="country" class="form-label">Country</lable>
+                <input name="listing[country]" placeholder="India" type="text" class="form-control" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="mb-3 col-md-5">
+                <lable for="location" class="form-label">Location</lable>
+                <input name="listing[location]" placeholder="Pune,Maharastra" type="text" class="form-control"  required>
+            </div>
+            <div class="mb-3 col-md-8">
+                <label for="contact_no" class="form-label">Contact No</label>
+                <input name="listing[contact_no]" placeholder="Enter contact no" type="tel" class="form-control" required>
+                <!-- tel = telephone number input -->
+            </div>
+        </div>
+        <button class="btn btn-dark add-btn mt-3">Add</button>
+    </form>
+</div>
+</div>
+
+<!-- form_control,form-label and mb-3 classes are bootstrap classes -->
